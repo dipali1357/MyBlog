@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Rango</title>
+</head>
+<body>
+	<div>
+	{% if category %}
+	<ul>
+		{% for category in categories %}
+		<li>
+			<a href="/rango/category/{{ category.slug }}">{{category.name}}
+			</a>
+		</li>	
+		{% endfor %}
+	</ul>
+	{% else %}
+		<strong>The specified category does not exist !</strong>
+	{% endif %}
+	</div>
+
+	<div>
+		<a href="/rango/about/">about Rango</a>  <br />
+		<img src="{% static "images/abc.jpg" %}" alt ="Picture of rango" />
+	</div>
+	</body>
+</html>
+
